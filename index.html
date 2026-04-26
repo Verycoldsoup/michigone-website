@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mich-I-Gone Junk Removal | Southeastern Michigan</title>
+<meta name="description" content="Family-owned junk removal serving Southeastern Michigan. Same-day service, fair pricing, licensed & insured. Call 734-822-GONE." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #111110;
+    --off-black: #1a1a18;
+    --charcoal: #2c2c28;
+    --orange: #e8640a;
+    --orange-light: #f5800f;
+    --orange-dim: #c4540a;
+    --cream: #f4f0e6;
+    --white: #ffffff;
+    --gray: #888880;
+    --gray-light: #d4d0c8;
+    --section-dark: #1a1a18;
+    --section-mid: #252520;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--black);
+    color: var(--cream);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(17,17,16,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(232,100,10,0.25);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    color: var(--cream);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--orange); }
+
+  .nav-phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-cta {
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 9px 20px;
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+  .nav-cta:hover { background: var(--orange-light); }
+
+  .nav-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--cream);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    display: none;
+  }
+  @media(min-width: 600px) { .nav-number { display: block; } }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 24px 60px;
+    position: relative;
+    overflow: hidden;
+    background: var(--black);
+  }
+
+  .hero-texture {
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 60px,
+        rgba(232,100,10,0.03) 60px,
+        rgba(232,100,10,0.03) 61px
+      );
+    pointer-events: none;
+  }
+
+  .hero-stripe {
+    position: absolute;
+    top: 0; bottom: 0;
+    right: 0;
+    width: 6px;
+    background: var(--orange);
+  }
+
+  .hero-inner {
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--orange);
+  }
+
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(56px, 12vw, 120px);
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 28px;
+  }
+
+  .hero h1 .highlight {
+    color: var(--orange);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: 18px;
+    color: var(--gray-light);
+    max-width: 480px;
+    margin-bottom: 40px;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background 0.15s, transform 0.1s;
+  }
+  .btn-primary:hover { background: var(--orange-light); transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+
+  .btn-ghost {
+    border: 2px solid rgba(244,240,230,0.3);
+    color: var(--cream);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: border-color 0.15s;
+  }
+  .btn-ghost:hover { border-color: var(--cream); }
+
+  .hero-badges {
+    margin-top: 52px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gray-light);
+  }
+  .badge-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+  }
+
+  /* ─── MARQUEE ─── */
+  .marquee-wrap {
+    background: var(--orange);
+    padding: 14px 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .marquee-track {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 22s linear infinite;
+  }
+  .marquee-item {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 0 28px;
+  }
+  .marquee-sep {
+    color: rgba(255,255,255,0.5);
+    padding: 0 4px;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ─── SECTION BASE ─── */
+  section { padding: 80px 24px; }
+
+  .section-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 40px;
+  }
+
+  /* ─── SERVICES ─── */
+  .services { background: var(--section-dark); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    background: rgba(244,240,230,0.06);
+    border: 1px solid rgba(244,240,230,0.06);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .service-item {
+    background: var(--off-black);
+    padding: 28px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: background 0.15s;
+  }
+  .service-item:hover { background: #222220; }
+
+  .service-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: rgba(232,100,10,0.12);
+    border: 1px solid rgba(232,100,10,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+
+  .service-name {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--cream);
+    line-height: 1.4;
+    padding-top: 7px;
+  }
+
+  /* ─── PRICING ─── */
+  .pricing { background: var(--section-mid); }
+
+  .pricing-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .price-card {
+    background: var(--off-black);
+    border: 1px solid rgba(244,240,230,0.08);
+    border-radius: 8px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.15s;
+  }
+  .price-card:hover { border-color: rgba(232,100,10,0.35); }
+  .price-card.featured {
+    border-color: var(--orange);
+    background: rgba(232,100,10,0.06);
+  }
+  .price-card.featured::after {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: 14px; right: -22px;
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    padding: 3px 28px;
+    transform: rotate(35deg);
+  }
+
+  .price-load {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gray-light);
+    margin-bottom: 10px;
+  }
+
+  .price-amount {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 1;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .price-amount sup {
+    font-size: 24px;
+    vertical-align: super;
+    font-weight: 700;
+  }
+
+  .price-note {
+    font-size: 13px;
+    color: var(--gray);
+  }
+
+  .price-visual {
+    margin-top: 16px;
+    height: 8px;
+    background: rgba(244,240,230,0.08);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .price-visual-fill {
+    height: 100%;
+    background: var(--orange);
+    border-radius: 4px;
+  }
+
+  .addons-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(244,240,230,0.08);
+  }
+
+  .addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+  }
+
+  .addon-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: var(--off-black);
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .addon-row span:first-child { color: var(--gray-light); }
+  .addon-row span:last-child {
+    font-weight: 600;
+    color: var(--orange);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── ABOUT ─── */
+  .about { background: var(--section-dark); }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media(min-width: 768px) {
+    .about-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  .about-body {
+    font-size: 17px;
+    color: var(--gray-light);
+    line-height: 1.75;
+    margin-bottom: 28px;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .stat-box {
+    background: var(--charcoal);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .stat-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 42px;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .about-visual {
+    background: var(--charcoal);
+    border-radius: 12px;
+    aspect-ratio: 4/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border: 1px solid rgba(232,100,10,0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .truck-svg {
+    width: 80%;
+    max-width: 320px;
+  }
+
+  .about-visual-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  /* ─── REVIEWS ─── */
+  .reviews { background: var(--section-mid); }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .review-card {
+    background: var(--off-black);
+    border: 1px solid rgba(244,240,230,0.08);
+    border-radius: 10px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .review-stars {
+    display: flex;
+    gap: 3px;
+  }
+  .star {
+    width: 16px; height: 16px;
+    background: var(--orange);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+
+  .review-text {
+    font-size: 15px;
+    color: var(--gray-light);
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .review-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+  .avatar-a { background: #e8640a; }
+  .avatar-b { background: #3b6d11; }
+  .avatar-c { background: #185fa5; }
+
+  .review-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--cream);
+  }
+  .review-location {
+    font-size: 12px;
+    color: var(--gray);
+  }
+
+  .google-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(244,240,230,0.05);
+    border: 1px solid rgba(244,240,230,0.1);
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-light);
+    margin-top: 32px;
+    text-decoration: none;
+  }
+
+  /* ─── SERVICE AREA ─── */
+  .area { background: var(--section-dark); }
+
+  .area-cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+  }
+
+  .city-tag {
+    background: var(--charcoal);
+    border: 1px solid rgba(244,240,230,0.1);
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-light);
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .city-tag:hover { border-color: var(--orange); color: var(--cream); }
+
+  /* ─── CTA BANNER ─── */
+  .cta-banner {
+    background: var(--orange);
+    padding: 72px 24px;
+    text-align: center;
+  }
+
+  .cta-banner h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(40px, 7vw, 80px);
+    text-transform: uppercase;
+    line-height: 0.95;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+
+  .cta-banner p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 36px;
+  }
+
+  .btn-white {
+    background: var(--white);
+    color: var(--orange);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 44px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: transform 0.1s;
+  }
+  .btn-white:hover { transform: translateY(-2px); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #0d0d0c;
+    padding: 48px 24px 32px;
+    border-top: 1px solid rgba(244,240,230,0.06);
+  }
+
+  .footer-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  .footer-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: var(--cream);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .footer-logo span { color: var(--orange); }
+
+  .footer-tagline {
+    font-size: 14px;
+    color: var(--gray);
+    margin-top: 6px;
+  }
+
+  .footer-links h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 14px;
+  }
+
+  .footer-links a {
+    display: block;
+    font-size: 14px;
+    color: var(--gray-light);
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.15s;
+  }
+  .footer-links a:hover { color: var(--cream); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(244,240,230,0.06);
+    padding-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--gray);
+  }
+
+  .social-links {
+    display: flex;
+    gap: 14px;
+  }
+  .social-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 0.15s;
+  }
+  .social-links a:hover { color: var(--orange); }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-up:nth-child(2) { transition-delay: 0.08s; }
+  .fade-up:nth-child(3) { transition-delay: 0.16s; }
+  .fade-up:nth-child(4) { transition-delay: 0.24s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">MICH-I-<span>GONE</span></a>
+  <div class="nav-phone">
+    <a href="tel:7348224663" class="nav-number">734-822-GONE</a>
+    <a href="tel:7348224663" class="nav-cta">Call Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-texture"></div>
+  <div class="hero-stripe"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Southeastern Michigan's Junk Removal Crew</div>
+    <h1>
+      Need It
+      <span class="highlight">Gone?</span>
+    </h1>
+    <p class="hero-sub">
+      Family-owned, licensed &amp; insured. We haul it all — residential, commercial, estate cleanouts, construction debris, and more. Fast, reliable, stress-free.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:7348224663" class="btn-primary">📞 Call 734-822-GONE</a>
+      <a href="#pricing" class="btn-ghost">See Pricing</a>
+    </div>
+    <div class="hero-badges">
+      <div class="badge"><div class="badge-dot"></div>Licensed &amp; Insured</div>
+      <div class="badge"><div class="badge-dot"></div>Family Owned</div>
+      <div class="badge"><div class="badge-dot"></div>Residential &amp; Commercial</div>
+      <div class="badge"><div class="badge-dot"></div>SE Michigan</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <span class="marquee-item">Junk Removal <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Garage Cleanouts <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Hot Tub Removal <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Estate Cleanouts <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Yard Cleanup <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Demo Debris <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Construction Debris <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Equipment Hauling <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Junk Removal <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Garage Cleanouts <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Hot Tub Removal <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Estate Cleanouts <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Yard Cleanup <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Demo Debris <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Construction Debris <span class="marquee-sep">✦</span></span>
+    <span class="marquee-item">Equipment Hauling <span class="marquee-sep">✦</span></span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-label">What We Handle</div>
+    <div class="section-title">We Haul It All</div>
+    <div class="services-grid">
+      <div class="service-item fade-up">
+        <div class="service-icon">🗑️</div>
+        <div class="service-name">Junk Removal</div>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">🌿</div>
+        <div class="service-name">Yard Clean Up</div>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">🛁</div>
+        <div class="service-name">Hot Tub / Deck / Shed Removal</div>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">🔨</div>
+        <div class="service-name">Remodel &amp; Demo Debris</div>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">🏠</div>
+        <div class="service-name">Garage &amp; Whole House Cleanout</div>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">🏗️</div>
+        <div class="service-name">Construction Site Debris</div>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">📦</div>
+        <div class="service-name">Estate Cleanouts</div>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">🏢</div>
+        <div class="service-name">Investor &amp; Rental Cleanouts</div>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">⚙️</div>
+        <div class="service-name">Equipment Hauling</div>
+      </div>
+      <div class="service-item fade-up">
+        <div class="service-icon">🪨</div>
+        <div class="service-name">Stone / Dirt / Mulch Delivery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="section-inner">
+    <div class="pricing-header">
+      <div>
+        <div class="section-label">Transparent Pricing</div>
+        <div class="section-title">Estimated Rates</div>
+      </div>
+      <p style="color: var(--gray-light); font-size: 15px; max-width: 280px; margin-bottom: 40px;">Based on a 14-ft trailer. Final quote given on-site before any work begins.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card fade-up">
+        <div class="price-load">¼ Load</div>
+        <div class="price-amount"><sup>$</sup>225</div>
+        <div class="price-note">Small cleanouts &amp; single items</div>
+        <div class="price-visual"><div class="price-visual-fill" style="width:25%"></div></div>
+      </div>
+      <div class="price-card fade-up">
+        <div class="price-load">½ Load</div>
+        <div class="price-amount"><sup>$</sup>375</div>
+        <div class="price-note">Medium loads &amp; room cleanouts</div>
+        <div class="price-visual"><div class="price-visual-fill" style="width:50%"></div></div>
+      </div>
+      <div class="price-card featured fade-up">
+        <div class="price-load">¾ Load</div>
+        <div class="price-amount"><sup>$</sup>500</div>
+        <div class="price-note">Large rooms &amp; garage cleanouts</div>
+        <div class="price-visual"><div class="price-visual-fill" style="width:75%"></div></div>
+      </div>
+      <div class="price-card fade-up">
+        <div class="price-load">Full Load</div>
+        <div class="price-amount"><sup>$</sup>750</div>
+        <div class="price-note">Full house cleanouts &amp; big jobs</div>
+        <div class="price-visual"><div class="price-visual-fill" style="width:100%"></div></div>
+      </div>
+    </div>
+
+    <div class="addons-title">Additional Costs</div>
+    <div class="addons-grid">
+      <div class="addon-row fade-up"><span>Extra Labor</span><span>$30/hr per person</span></div>
+      <div class="addon-row fade-up"><span>Disassembly</span><span>$20 per item</span></div>
+      <div class="addon-row fade-up"><span>Stairs</span><span>$20 per flight</span></div>
+      <div class="addon-row fade-up"><span>Heavy Weight (stone, metal, shingles)</span><span>$50 per ¼ load</span></div>
+      <div class="addon-row fade-up"><span>Long Distance</span><span>$50 per 100 ft</span></div>
+      <div class="addon-row fade-up"><span>Bagging &amp; Packing</span><span>$50 per 10 bags</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-inner">
+      <div>
+        <div class="section-label">Who We Are</div>
+        <div class="section-title">Family-Owned &amp; Proud of It</div>
+        <p class="about-body">
+          At Mich-I-Gone, we treat every job like it's for our own family. We're a local, family-owned junk removal company serving communities across Southeastern Michigan with honesty, reliability, and top-notch service.
+        </p>
+        <p class="about-body">
+          Whether you're clearing a garage, preparing for a move, or tackling a full property cleanout — our experienced team shows up on time, works with respect, and gets the job done right.
+        </p>
+        <a href="tel:7348224663" class="btn-primary" style="margin-top: 8px;">Get a Free Quote</a>
+      </div>
+      <div>
+        <div class="about-stats">
+          <div class="stat-box">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Licensed &amp; Insured</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">SE</div>
+            <div class="stat-label">Michigan Proud</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">5★</div>
+            <div class="stat-label">Customer Reviews</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">Any</div>
+            <div class="stat-label">Job, Any Size</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-inner">
+    <div class="section-label">What People Say</div>
+    <div class="section-title">Happy Customers</div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+        </div>
+        <p class="review-text">"These guys were fantastic. Showed up on time, worked fast, and left the garage completely spotless. Pricing was exactly what they quoted — no surprises. Will definitely use again!"</p>
+        <div class="review-author">
+          <div class="review-avatar avatar-a">JS</div>
+          <div>
+            <div class="review-name">Jennifer S.</div>
+            <div class="review-location">Wyandotte, MI</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+        </div>
+        <p class="review-text">"Had an old hot tub and a ton of demo debris from a basement renovation. Mich-I-Gone handled everything in one trip. Super professional and reasonably priced. Highly recommend!"</p>
+        <div class="review-author">
+          <div class="review-avatar avatar-b">MR</div>
+          <div>
+            <div class="review-name">Mike R.</div>
+            <div class="review-location">Trenton, MI</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-stars">
+          <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+        </div>
+        <p class="review-text">"Used them for a full estate cleanout after my mother passed. They were respectful, careful, and incredibly efficient. Couldn't have asked for a better experience during a hard time."</p>
+        <div class="review-author">
+          <div class="review-avatar avatar-c">TL</div>
+          <div>
+            <div class="review-name">Tracy L.</div>
+            <div class="review-location">Southgate, MI</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="https://www.facebook.com/profile.php?id=61576098515993" class="google-badge" target="_blank" rel="noopener">
+      ⭐ Leave us a review on Facebook
+    </a>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area" id="area">
+  <div class="section-inner">
+    <div class="section-label">Where We Work</div>
+    <div class="section-title">Serving SE Michigan</div>
+    <p style="color: var(--gray-light); font-size: 16px; max-width: 560px;">We proudly serve communities throughout Southeastern Michigan. Not sure if we cover your area? Give us a call.</p>
+    <div class="area-cities">
+      <div class="city-tag">Wyandotte</div>
+      <div class="city-tag">Trenton</div>
+      <div class="city-tag">Southgate</div>
+      <div class="city-tag">Riverview</div>
+      <div class="city-tag">Lincoln Park</div>
+      <div class="city-tag">Dearborn</div>
+      <div class="city-tag">Detroit</div>
+      <div class="city-tag">Downriver</div>
+      <div class="city-tag">Taylor</div>
+      <div class="city-tag">Allen Park</div>
+      <div class="city-tag">Flat Rock</div>
+      <div class="city-tag">Monroe</div>
+      <div class="city-tag">And More...</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div style="max-width: 700px; margin: 0 auto;">
+    <h2>Ready to Get<br>It Gone?</h2>
+    <p>Call us today for a free, no-obligation quote. Same-day and next-day service available.</p>
+    <a href="tel:7348224663" class="btn-white">📞 734-822-GONE</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="#" class="footer-logo">MICH-I-<span>GONE</span></a>
+        <div class="footer-tagline">Junk Removal · Southeastern Michigan</div>
+        <div style="margin-top: 16px;">
+          <a href="tel:7348224663" style="color: var(--orange); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; text-decoration: none; letter-spacing: 0.04em;">734-822-GONE</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="#services">Junk Removal</a>
+        <a href="#services">Garage Cleanouts</a>
+        <a href="#services">Estate Cleanouts</a>
+        <a href="#services">Construction Debris</a>
+        <a href="#services">Hot Tub Removal</a>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <a href="#about">About Us</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#area">Service Area</a>
+        <a href="tel:7348224663">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Mich-I-Gone Junk Removal. Licensed &amp; Insured.</span>
+      <div class="social-links">
+        <a href="https://www.instagram.com/michigonejunkremoval734/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61576098515993" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const els = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  els.forEach(el => observer.observe(el));
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
