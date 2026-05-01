@@ -856,6 +856,63 @@
   }
   .social-links a:hover { color: var(--gold); }
 
+  /* ── BEFORE / AFTER ── */
+  .before-after-section { margin-top: 52px; }
+
+  .before-after-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(201,162,39,0.2);
+  }
+
+  .before-after-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .before-after-group.triple { grid-template-columns: 1fr 1fr 1fr; }
+
+  .before-after-item {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4/3;
+    background: var(--charcoal);
+  }
+
+  .before-after-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .before-after-item:hover img { transform: scale(1.04); }
+
+  .ba-badge {
+    position: absolute;
+    top: 10px; left: 10px;
+    background: rgba(10,15,26,0.82);
+    border-radius: 3px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+  }
+  .ba-badge.after { border-color: #5cb88a; color: #5cb88a; }
+  .ba-badge.during { border-color: var(--gray-light); color: var(--gray-light); }
+
   /* ── ANIMATIONS ── */
   .fade-up {
     opacity: 0;
@@ -952,7 +1009,7 @@
         </div>
       </div>
       <div class="services-photo fade-up">
-        <img src="20260411_182548_resized.jpg" alt="Mich-I-Gone truck ready for work" />
+        <img src="povdump.jpg" alt="Mich-I-Gone truck ready for work" />
         <div class="services-photo-caption">Licensed &amp; Insured · SE Michigan</div>
       </div>
     </div>
@@ -966,48 +1023,55 @@
     <div class="section-title">Real Jobs, Real Results</div>
     <div class="gallery-grid">
       <div class="gallery-item tall fade-up">
-        <img src="IMG_20250517_150547.jpg" alt="Before cleanout" />
-        <div class="gallery-item-label">Cleanout Job</div>
+        <img src="housecleanout1.jpg" alt="House cleanout" />
+        <div class="gallery-item-label">House Cleanout</div>
       </div>
       <div class="gallery-item fade-up">
-        <img src="IMG_20250517_150641.jpg" alt="Junk removal job" />
-        <div class="gallery-item-label">Junk Removal</div>
+        <img src="housecleanout2.jpg" alt="House cleanout" />
+        <div class="gallery-item-label">House Cleanout</div>
       </div>
       <div class="gallery-item fade-up">
-        <img src="IMG_20250523_172252.jpg" alt="Yard cleanup" />
-        <div class="gallery-item-label">Yard Cleanup</div>
+        <img src="yardwastejob1.jpg" alt="Yard waste removal" />
+        <div class="gallery-item-label">Yard Waste Removal</div>
       </div>
       <div class="gallery-item fade-up">
-        <img src="IMG_20250613_150300.jpg" alt="Demo debris hauling" />
-        <div class="gallery-item-label">Demo Debris</div>
-      </div>
-      <div class="gallery-item fade-up">
-        <img src="IMG_20250617_131705.jpg" alt="Full trailer load" />
-        <div class="gallery-item-label">Full Load Haul</div>
-      </div>
-      <div class="gallery-item fade-up">
-        <img src="IMG_20250617_131705 (2).jpg" alt="Residential cleanout" />
-        <div class="gallery-item-label">Residential Cleanout</div>
-      </div>
-      <div class="gallery-item fade-up">
-        <img src="IMG_20250627_213514.jpg" alt="Job site" />
-        <div class="gallery-item-label">Job Complete</div>
-      </div>
-      <div class="gallery-item fade-up">
-        <img src="IMG_20250627_213517.jpg" alt="Job site cleared" />
-        <div class="gallery-item-label">Site Cleared</div>
-      </div>
-      <div class="gallery-item fade-up">
-        <img src="20250625_151859.jpg" alt="Mich-I-Gone crew" />
+        <img src="theboysmainphoto.jpg" alt="Mich-I-Gone crew" />
         <div class="gallery-item-label">Our Crew</div>
       </div>
       <div class="gallery-item fade-up">
-        <img src="IMG_20260425_085523_resized.jpg" alt="Mich-I-Gone job site" />
-        <div class="gallery-item-label">Job Site</div>
+        <img src="theboys2.jpg" alt="Mich-I-Gone team" />
+        <div class="gallery-item-label">Our Team</div>
       </div>
-      <div class="gallery-item fade-up">
-        <img src="IMG_20250523_172238.jpg" alt="Junk removal in progress" />
-        <div class="gallery-item-label">Junk Removal</div>
+    </div>
+
+    <!-- Before / After -->
+    <div class="before-after-section">
+      <div class="before-after-title">Before &amp; After</div>
+
+      <div class="before-after-group fade-up">
+        <div class="before-after-item">
+          <img src="drivewaybefore.jpg" alt="Driveway before cleanup" />
+          <div class="ba-badge">Before</div>
+        </div>
+        <div class="before-after-item">
+          <img src="drivewayafter.jpg" alt="Driveway after cleanup" />
+          <div class="ba-badge after">After</div>
+        </div>
+      </div>
+
+      <div class="before-after-group triple fade-up">
+        <div class="before-after-item">
+          <img src="playplacebefore.jpg" alt="Play place before" />
+          <div class="ba-badge">Before</div>
+        </div>
+        <div class="before-after-item">
+          <img src="playplaceduring.jpg" alt="Play place during removal" />
+          <div class="ba-badge during">During</div>
+        </div>
+        <div class="before-after-item">
+          <img src="playplaceafter.jpg" alt="Play place after" />
+          <div class="ba-badge after">After</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1098,10 +1162,10 @@
       </div>
       <div class="about-photo-stack">
         <div class="about-photo-main">
-          <img src="IMG_20260425_085523_resized.jpg" alt="Mich-I-Gone team on the job" />
+          <img src="theboysmainphoto.jpg" alt="Mich-I-Gone team on the job" />
         </div>
         <div class="about-photo-inset">
-          <img src="IMG_20260425_120011_resized.jpg" alt="Job completed" />
+          <img src="theboys2.jpg" alt="Mich-I-Gone crew" />
         </div>
       </div>
     </div>
@@ -1189,6 +1253,23 @@
     <a href="tel:7348224663" class="btn-gold">📞 734-822-GONE</a>
   </div>
 </div>
+
+<!-- LAND CLEARING — coming soon
+<section class="gallery" id="land-clearing">
+  <div class="section-inner">
+    <div class="section-label">Land Clearing</div>
+    <div class="section-title">Lot Clearing & Brush Removal</div>
+    <div class="gallery-grid">
+      <div class="gallery-item fade-up"><img src="landclearing1.jpg" alt="Land clearing job" /><div class="gallery-item-label">Lot Clearing</div></div>
+      <div class="gallery-item fade-up"><img src="landclearing2.jpg" alt="Brush removal" /><div class="gallery-item-label">Brush Removal</div></div>
+      <div class="gallery-item fade-up"><img src="landclearing3.jpg" alt="Land clearing" /><div class="gallery-item-label">Land Clearing</div></div>
+      <div class="gallery-item fade-up"><img src="landclearing4.jpg" alt="Lot cleared" /><div class="gallery-item-label">Lot Cleared</div></div>
+      <div class="gallery-item fade-up"><img src="landclearing5.jpg" alt="Land clearing" /><div class="gallery-item-label">Land Clearing</div></div>
+      <div class="gallery-item fade-up"><img src="landclearing6.jpg" alt="Land clearing complete" /><div class="gallery-item-label">Job Complete</div></div>
+    </div>
+  </div>
+</section>
+-->
 
 <!-- FOOTER -->
 <footer>
