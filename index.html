@@ -11,9 +11,9 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --black: #0a0f1a;
-    --off-black: #0f1825;
-    --charcoal: #162035;
+    --black: #1a2d52;
+    --off-black: #152244;
+    --charcoal: #1c2f58;
     --navy: #1a2d52;
     --navy-light: #1e3a6e;
     --gold: #c9a227;
@@ -23,8 +23,8 @@
     --white: #ffffff;
     --gray: #6a7a9a;
     --gray-light: #b8c4d8;
-    --section-dark: #0d1520;
-    --section-mid: #111e30;
+    --section-dark: #132040;
+    --section-mid: #1d3060;
   }
 
   html { scroll-behavior: smooth; }
@@ -43,7 +43,7 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: rgba(10,15,26,0.95);
+    background: rgba(15,28,58,0.97);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(201,162,39,0.2);
     padding: 0 24px;
@@ -228,7 +228,12 @@
     min-height: 400px;
     overflow: hidden;
   }
-  @media(max-width: 899px) { .hero-right { display: none; } }
+  @media(max-width: 899px) {
+    .hero-right {
+      min-height: 220px;
+      order: -1;
+    }
+  }
 
   .hero-logo-display {
     position: absolute;
@@ -730,7 +735,7 @@
 
   /* ── CTA BANNER ── */
   .cta-banner {
-    background: var(--navy);
+    background: var(--navy-light);
     border-top: 4px solid var(--gold);
     border-bottom: 4px solid var(--gold);
     padding: 72px 24px;
@@ -774,7 +779,7 @@
 
   /* ── FOOTER ── */
   footer {
-    background: #060c16;
+    background: #0f1e3c;
     padding: 48px 24px 32px;
     border-top: 1px solid rgba(184,196,216,0.06);
   }
@@ -1006,6 +1011,11 @@
           <div class="service-item fade-up"><div class="service-icon">🏢</div><div class="service-name">Investor Cleanouts</div></div>
           <div class="service-item fade-up"><div class="service-icon">⚙️</div><div class="service-name">Equipment Hauling</div></div>
           <div class="service-item fade-up"><div class="service-icon">🪨</div><div class="service-name">Stone / Dirt / Mulch</div></div>
+          <div class="service-item fade-up"><div class="service-icon">🌲</div><div class="service-name">Lot &amp; Property Clearing</div></div>
+          <div class="service-item fade-up"><div class="service-icon">🚜</div><div class="service-name">Debris Removal &amp; Grading</div></div>
+          <div class="service-item fade-up"><div class="service-icon">🛣️</div><div class="service-name">Driveway Regrading &amp; Installation</div></div>
+          <div class="service-item fade-up"><div class="service-icon">🌿</div><div class="service-name">Brush Clearing</div></div>
+          <div class="service-item fade-up"><div class="service-icon">🏚️</div><div class="service-name">House &amp; Garage Demolition</div></div>
         </div>
       </div>
       <div class="services-photo fade-up">
@@ -1078,7 +1088,7 @@
         <div class="section-label">Transparent Pricing</div>
         <div class="section-title">Straightforward Rates</div>
       </div>
-      <p class="pricing-note">Based on a 14-ft trailer. Final quote given on-site — no surprises, ever.</p>
+      <p class="pricing-note">Based on a 15-ft dump trailer. Final quote given on-site — no surprises, ever.</p>
     </div>
 
     <div class="pricing-grid">
@@ -1222,17 +1232,18 @@
     <p style="color: var(--gray-light); font-size: 16px; max-width: 560px;">We proudly serve communities throughout Southeastern Michigan. Not sure if we cover your area? Just give us a call.</p>
     <div class="area-cities">
       <div class="city-tag">Wyandotte</div>
-      <div class="city-tag">Trenton</div>
       <div class="city-tag">Southgate</div>
       <div class="city-tag">Riverview</div>
       <div class="city-tag">Lincoln Park</div>
       <div class="city-tag">Dearborn</div>
-      <div class="city-tag">Detroit</div>
       <div class="city-tag">Downriver</div>
-      <div class="city-tag">Taylor</div>
       <div class="city-tag">Allen Park</div>
       <div class="city-tag">Flat Rock</div>
       <div class="city-tag">Monroe</div>
+      <div class="city-tag">Bloomfield</div>
+      <div class="city-tag">Saline</div>
+      <div class="city-tag">Ann Arbor</div>
+      <div class="city-tag">Plymouth</div>
       <div class="city-tag">And More...</div>
     </div>
   </div>
