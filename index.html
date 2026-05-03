@@ -380,6 +380,13 @@
     display: block;
   }
 
+  .services-photo--contain img {
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    background: var(--charcoal);
+  }
+
   .services-photo-caption {
     position: absolute;
     bottom: 0; left: 0; right: 0;
@@ -1275,7 +1282,7 @@
           <div class="addon-row fade-up"><span>Minimum (all services)</span><span>3 hrs</span></div>
         </div>
       </div>
-      <div class="services-photo fade-up">
+      <div class="services-photo services-photo--contain fade-up">
         <img src="landclearingsign.jpg" alt="Mich-I-Gone land clearing" />
         <div class="services-photo-caption">Licensed &amp; Insured · SE Michigan</div>
       </div>
