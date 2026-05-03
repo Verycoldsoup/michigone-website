@@ -7,6 +7,7 @@
 <meta name="description" content="Family-owned junk removal serving Southeastern Michigan. Same-day service, fair pricing, licensed & insured. Call 734-822-GONE." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -870,13 +871,7 @@
     border-radius: 10px;
     overflow: hidden;
     border: 2px solid rgba(201,162,39,0.25);
-  }
-  .service-map iframe {
-    width: 100%;
-    height: 400px;
-    display: block;
-    border: none;
-    filter: invert(0.85) hue-rotate(180deg) saturate(0.7) brightness(0.9);
+    height: 420px;
   }
   .service-map-note {
     font-size: 12px;
@@ -884,6 +879,15 @@
     margin-top: 10px;
     letter-spacing: 0.04em;
   }
+  .leaflet-popup-content-wrapper {
+    background: #1a2d52;
+    color: #eef2f8;
+    border: 1px solid rgba(201,162,39,0.4);
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  }
+  .leaflet-popup-tip { background: #1a2d52; }
+  .leaflet-popup-content { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.06em; margin: 8px 12px; }
 
   /* ── BEFORE / AFTER CAROUSEL ── */
   .before-after-section { margin-top: 52px; }
@@ -1457,15 +1461,8 @@
       <div class="city-tag">Plymouth</div>
       <div class="city-tag">And More...</div>
     </div>
-    <div class="service-map">
-      <iframe
-        src="https://www.openstreetmap.org/export/embed.html?bbox=-84.2%2C41.8%2C-82.8%2C42.7&layer=mapnik"
-        title="Mich-I-Gone service area — Southeastern Michigan"
-        loading="lazy"
-        allowfullscreen>
-      </iframe>
-    </div>
-    <p class="service-map-note">Southeastern Michigan service area · Not sure if we cover your location? Give us a call.</p>
+    <div class="service-map" id="serviceMap"></div>
+    <p class="service-map-note">Gold markers show cities we serve · Not sure if we cover your location? Give us a call.</p>
   </div>
 </section>
 
@@ -1513,6 +1510,46 @@
     </div>
   </div>
 </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  (function() {
+    const map = L.map('serviceMap', { scrollWheelZoom: false, zoomControl: true })
+      .setView([42.2, -83.46], 9);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      maxZoom: 14
+    }).addTo(map);
+
+    const cities = [
+      { name: 'Wyandotte',    lat: 42.2136, lng: -83.1499 },
+      { name: 'Southgate',    lat: 42.2142, lng: -83.1938 },
+      { name: 'Riverview',    lat: 42.1736, lng: -83.1838 },
+      { name: 'Lincoln Park', lat: 42.2503, lng: -83.1782 },
+      { name: 'Dearborn',     lat: 42.3223, lng: -83.1763 },
+      { name: 'Allen Park',   lat: 42.2578, lng: -83.2110 },
+      { name: 'Flat Rock',    lat: 42.0981, lng: -83.2749 },
+      { name: 'Monroe',       lat: 41.9162, lng: -83.3974 },
+      { name: 'Bloomfield',   lat: 42.5837, lng: -83.2455 },
+      { name: 'Saline',       lat: 42.1667, lng: -83.7816 },
+      { name: 'Ann Arbor',    lat: 42.2808, lng: -83.7430 },
+      { name: 'Plymouth',     lat: 42.3714, lng: -83.4702 },
+      { name: 'Downriver',    lat: 42.1300, lng: -83.2000 },
+    ];
+
+    cities.forEach(function(city) {
+      L.circleMarker([city.lat, city.lng], {
+        radius: 10,
+        fillColor: '#c9a227',
+        color: '#eef2f8',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      }).addTo(map).bindPopup(city.name);
+    });
+  })();
+</script>
 
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
